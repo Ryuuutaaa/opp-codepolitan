@@ -23,6 +23,11 @@ class User
     {
         echo "Hello private";
     }
+
+    public function sayMe()
+    {
+        return $this->sayPrivate();
+    }
 }
 
 class Customer extends User
@@ -39,7 +44,7 @@ $u->lasName = "Class";
 
 // echo $u->regId . '<br>';
 // echo $u->level . '<br>';
-
+echo $u->sayMe() . '<br>';
 echo $u->fullName() . '<br>';
 // echo $u->sayProtected() . '<br>';
 // echo $u->sayPrivate() . '<br>';
